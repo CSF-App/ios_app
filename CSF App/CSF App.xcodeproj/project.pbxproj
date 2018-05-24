@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		419071F820B4B9B10038A611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419071F720B4B9B10038A611 /* AppDelegate.swift */; };
-		419071FA20B4B9B10038A611 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419071F920B4B9B10038A611 /* ViewController.swift */; };
 		419071FD20B4B9B10038A611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419071FB20B4B9B10038A611 /* Main.storyboard */; };
 		419071FF20B4B9B30038A611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419071FE20B4B9B30038A611 /* Assets.xcassets */; };
 		4190720220B4B9B30038A611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4190720020B4B9B30038A611 /* LaunchScreen.storyboard */; };
+		4190720C20B754F10038A611 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4190720B20B754F10038A611 /* SWRevealViewController.m */; };
+		4190720E20B75AEC0038A611 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190720D20B75AEC0038A611 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		419071F420B4B9B10038A611 /* CSF App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSF App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419071F720B4B9B10038A611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		419071F920B4B9B10038A611 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		419071FC20B4B9B10038A611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		419071FE20B4B9B30038A611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4190720120B4B9B30038A611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4190720320B4B9B30038A611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4190720920B754F00038A611 /* CSF App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSF App-Bridging-Header.h"; sourceTree = "<group>"; };
+		4190720A20B754F10038A611 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		4190720B20B754F10038A611 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		4190720D20B75AEC0038A611 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,14 @@
 			isa = PBXGroup;
 			children = (
 				419071F720B4B9B10038A611 /* AppDelegate.swift */,
-				419071F920B4B9B10038A611 /* ViewController.swift */,
 				419071FB20B4B9B10038A611 /* Main.storyboard */,
 				419071FE20B4B9B30038A611 /* Assets.xcassets */,
 				4190720020B4B9B30038A611 /* LaunchScreen.storyboard */,
 				4190720320B4B9B30038A611 /* Info.plist */,
+				4190720D20B75AEC0038A611 /* ViewController.swift */,
+				4190720A20B754F10038A611 /* SWRevealViewController.h */,
+				4190720B20B754F10038A611 /* SWRevealViewController.m */,
+				4190720920B754F00038A611 /* CSF App-Bridging-Header.h */,
 			);
 			path = "CSF App";
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 				TargetAttributes = {
 					419071F320B4B9B10038A611 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -135,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				419071FA20B4B9B10038A611 /* ViewController.swift in Sources */,
+				4190720E20B75AEC0038A611 /* ViewController.swift in Sources */,
 				419071F820B4B9B10038A611 /* AppDelegate.swift in Sources */,
+				4190720C20B754F10038A611 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "CSF App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -288,6 +298,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CSFApp.ios.CSF-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CSF App/CSF App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,6 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "CSF App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,6 +318,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CSFApp.ios.CSF-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CSF App/CSF App-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
