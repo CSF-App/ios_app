@@ -132,7 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fS1-8U-EkQ">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-menu-filled-50" id="tHP-rP-TzF"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-alarm-50" id="1Ip-sD-2x3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-credit-card-filled-50" id="1Ip-sD-2x3"/>
                     </navigationItem>
                     <connections>
                         <outlet property="alertButton" destination="1Ip-sD-2x3" id="OsM-09-rI4"/>
@@ -191,7 +191,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-alarm-50" width="50" height="50"/>
+        <image name="icons8-credit-card-filled-50" width="50" height="50"/>
         <image name="icons8-menu-filled-50" width="50" height="50"/>
     </resources>
 </document>

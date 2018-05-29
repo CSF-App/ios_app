@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: 32.68, longitude: -117.18, zoom: 10)
+        let camera = GMSCameraPosition.camera(withLatitude: 32.68, longitude: -117.18, zoom: 15)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         self.view = mapView
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 275
-            revealViewController().rightViewRevealWidth = 160
+            revealViewController().rightViewRevealWidth = 300
             
             
             alertButton.target = revealViewController()
