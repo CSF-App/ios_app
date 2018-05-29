@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //call sideMenus
         sideMenus()
-        customizeNavBar() 
+        //customizeNavBar() 
         // Do any additional setup after loading the view.
     }
 
@@ -46,11 +46,11 @@ class ViewController: UIViewController {
     
     //custom color for menu
     
-    func customizeNavBar(){
+    /*func customizeNavBar(){
         navigationController?.navigationBar.tintColor = UIColor(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 255/255, green: 90/255, blue: 30/255, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
         
-    }
+    }*/
     
 }
