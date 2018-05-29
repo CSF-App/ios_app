@@ -7,23 +7,24 @@
 //
 
 import UIKit
-
+import GoogleMaps
 class ViewController: UIViewController {
 
     @IBOutlet weak var alertButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-//call sideMenus
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 32.68, longitude: -117.18, zoom: 10)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.isMyLocationEnabled = true
+        self.view = mapView
+        //call sideMenus
         sideMenus()
         //customizeNavBar() 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 //side menu method
     func sideMenus(){
