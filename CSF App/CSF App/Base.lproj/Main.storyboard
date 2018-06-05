@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bwp-dZ-5V3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bwp-dZ-5V3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="mnQ-Xa-Gk3">
+            <objects>
+                <viewController id="9RN-nb-X0k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fgF-e1-y5P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fb-4w-y2B">
+                                <rect key="frame" x="0.0" y="597" width="89" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Fav-ib-OWO" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="fAH-hu-BxQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wis-mN-zd0">
+                                <rect key="frame" x="16" y="46" width="328" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="LdM-Uu-GjL"/>
+                                </constraints>
+                                <state key="normal" title="Notifications ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTf-1f-7kV">
+                                <rect key="frame" x="16" y="102" width="328" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="JJA-ip-VSh"/>
+                                </constraints>
+                                <state key="normal" title="Help ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LuJ-Jh-LDv" firstAttribute="trailing" secondItem="Wis-mN-zd0" secondAttribute="trailing" constant="31" id="2GB-iQ-b5v"/>
+                            <constraint firstItem="rTf-1f-7kV" firstAttribute="trailing" secondItem="Wis-mN-zd0" secondAttribute="trailing" id="4Gx-CF-5zy"/>
+                            <constraint firstItem="rTf-1f-7kV" firstAttribute="leading" secondItem="Wis-mN-zd0" secondAttribute="leading" id="Gk5-Ah-pIn"/>
+                            <constraint firstItem="LuJ-Jh-LDv" firstAttribute="trailing" secondItem="4Fb-4w-y2B" secondAttribute="trailing" constant="286" id="HgK-gd-8gs"/>
+                            <constraint firstItem="Wis-mN-zd0" firstAttribute="leading" secondItem="fgF-e1-y5P" secondAttribute="leadingMargin" id="UlQ-zW-go0"/>
+                            <constraint firstItem="4Fb-4w-y2B" firstAttribute="top" secondItem="LuJ-Jh-LDv" secondAttribute="top" constant="577" id="W46-ak-MrX"/>
+                            <constraint firstItem="4Fb-4w-y2B" firstAttribute="bottom" secondItem="LuJ-Jh-LDv" secondAttribute="bottom" id="bqw-JD-0p3"/>
+                            <constraint firstItem="rTf-1f-7kV" firstAttribute="top" secondItem="LuJ-Jh-LDv" secondAttribute="top" constant="82" id="eeV-lg-hhs"/>
+                            <constraint firstItem="4Fb-4w-y2B" firstAttribute="leading" secondItem="fgF-e1-y5P" secondAttribute="leading" id="l7r-5k-13R"/>
+                            <constraint firstItem="Wis-mN-zd0" firstAttribute="top" secondItem="LuJ-Jh-LDv" secondAttribute="top" constant="26" id="six-Ke-DZC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LuJ-Jh-LDv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Rj-Mb-U7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1831.2" y="496.10194902548727"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="d4q-Mz-3el">
             <objects>
@@ -64,6 +119,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="TSg-Ly-bHp" secondAttribute="bottom" constant="1" id="nfh-UT-MeI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9RN-nb-X0k" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Q8x-h8-PK6"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="El2-zp-e4s">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
@@ -130,7 +188,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VWf-bq-rCY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fS1-8U-EkQ">
+                    <navigationItem key="navigationItem" id="fS1-8U-EkQ" colorLabel="IBBuiltInLabel-Green">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-menu-filled-50" id="tHP-rP-TzF"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-credit-card-filled-50" id="1Ip-sD-2x3"/>
                     </navigationItem>
@@ -194,4 +253,7 @@
         <image name="icons8-credit-card-filled-50" width="50" height="50"/>
         <image name="icons8-menu-filled-50" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fAH-hu-BxQ"/>
+    </inferredMetricsTieBreakers>
 </document>
